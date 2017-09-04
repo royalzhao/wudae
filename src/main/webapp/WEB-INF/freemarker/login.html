@@ -5,12 +5,12 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Title Page</title>
+        <title>登录/注册</title>
 
         <!-- Bootstrap CSS -->
-        <link href="./css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./css/base.css">
-        <link rel="stylesheet" href="./css/style.css">
+        <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./lib/css/base.css">
+        <link rel="stylesheet" href="./lib/css/style.css">
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -22,8 +22,7 @@
         <div class="container">
             <div class="login-box">
                 <div class="box-title">
-                    <h1>吃点啥</h1>
-                    <small>没事吃点啥</small>
+                   <img src="/lib/img/logo.png" alt="">
                 </div>
                 <div class="box-content">
                     <div class="login-tabs">
@@ -47,19 +46,19 @@
                                 <div class="form-group">
                                     <p>温馨提示：未注册吃点啥账号的手机号，登录时将自动注册，且代表您已同意 <span>《用户服务协议》</span> </p>
                                 </div>
-                                 <button type="button" class="btn btn-success btn-block">登录</button>
+                                 <button type="button" class="btn btn-success btn-block login-btn">登录</button>
                             </form>
                         </div>
                         <div style="display:none">
-                            <form action="" method="POST" role="form">
+                            <form method="POST" role="form">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="手机/邮箱/用户名">
+                                    <input type="text" class="form-control" id="account" placeholder="手机/邮箱/用户名">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="密码">
+                                    <input type="text" class="form-control" id="password" placeholder="密码">
                                 </div>
                                 
-                                <button type="button" class="btn btn-success btn-block">登录</button>
+                                <button type="button" class="btn btn-success btn-block login-btn">登录</button>
                             </form>
                         </div>
                     </div>
@@ -69,9 +68,9 @@
 
 
         <!-- jQuery -->
-        <script src="./js/jquery.js"></script>
+        <script src="./lib//js/jquery.js"></script>
         <!-- Bootstrap JavaScript -->
-        <script src="./js/bootstrap.min.js"></script>
+        <script src="./lib//js/bootstrap.min.js"></script>
         <script>
             $(function(){
                 var $div_li = $("div.login-tabs ul li");
@@ -83,6 +82,26 @@
                         .eq(index).show()   //显示 <li>元素对应的<div>元素
                         .siblings().hide();
                 })
+                var top=($(document).height() - $('.login-box').height())/4;
+                $('.login-box').css('top',top)
+
+                $('.login-btn').click(function(){
+                    $.ajax({
+                        url:'',
+                        data:{
+                            account:$('#account').val(),
+                            password:$('#passoword').val()
+                        },
+                        type:'post',
+                        success:function(data){
+                            
+                        },
+                        error:function(){
+                            console.log('网络错误！');
+                        }
+                    })
+                })
+                
 		    })
         </script>
     </body>

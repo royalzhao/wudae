@@ -1,89 +1,149 @@
-
 <!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Title Page</title>
-
-        <!-- Bootstrap CSS -->
-        <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./lib/css/base.css">
-        <link rel="stylesheet" href="./lib/css/style.css">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-    </head>
-    <body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./lib/css/iconfont.css">
+    <link rel="stylesheet" href="./lib/css/base.css">
+    <link rel="stylesheet" href="./lib/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-default" role="navigation">
         <div class="container">
-            <div class="login-box">
-                <div class="box-title">
-                    <h1>�Ե�ɶ</h1>
-                    <small>û�³Ե�ɶ</small>
-                </div>
-                <div class="box-content">
-                    <div class="login-tabs">
-                        <ul>
-                            <li class="selected"><a>���ŵ�¼</a></li>
-                            <li><a>�����¼</a></li>
-                        </ul>
+                    
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img src="./lib/img/logo2.png" alt="武大饿"></a>
+            </div>
+        
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页</a></li>
+                    <li><a href="#">我的菜单</a></li>
+                    <li><a href="#">加盟合作</a></li>
+                </ul>
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="visible-lg"><a href="#"><span class="iconfont icon-erji"></span> 服务中心</a></li>
+                    <li class="visible-lg"><a href="#">规则中心</a></li>
+                    <li class="visible-lg"><a href="#"><span class="iconfont icon-shouji"></span> 手机应用</a></li>
+                    <li><a href="#"><span class="iconfont icon-yonghu"></span> 登录/注册</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+
+    <div class="index-content">
+        <div class="container">
+            <div class="adress pull-left">
+                <span>当前位置：</span>
+                <span>实际地址</span>
+                <span><a href="">[切换地址]</a></span>
+
+            </div>
+            <div class="search pull-right">
+                <form action="#" method="post" class="search-form">
+                    <input type="search" name="search" id="search" value="" />
+                    <button class="button btn-search" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                </form>
+            </div>
+           
+        </div>
+        <div class="container">
+            <div class="fenlei">
+                <div class="row">
+                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                        <p>商家分类:</p>
                     </div>
-                    <div class="login-content">
-                        <div>
-                            <form action="" method="POST" role="form">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="" placeholder="�ֻ���">
-                                        <div class="input-group-addon">��ȡ��֤��</div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="��֤��">
-                                </div>
-                                <div class="form-group">
-                                    <p>��ܰ��ʾ��δע��Ե�ɶ�˺ŵ��ֻ��ţ���¼ʱ���Զ�ע�ᣬ�Ҵ�������ͬ�� <span>���û�����Э�顷</span> </p>
-                                </div>
-                                 <button type="button" class="btn btn-success btn-block">��¼</button>
-                            </form>
-                        </div>
-                        <div style="display:none">
-                            <form action="" method="POST" role="form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="�ֻ�/����/�û���">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="����">
-                                </div>
-                                
-                                <button type="button" class="btn btn-success btn-block">��¼</button>
-                            </form>
-                        </div>
+                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                        <ul>
+                            <li class="active"><a href="#">全部商家</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                            <li><a href="#">美食</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="main">
+                <div class="row">
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 main-item">
+                        <div class="item-left">
+                            <div class="item-pic">
+                                <img src="./lib/img/shop/shop (1).jpg" alt="">
+                            </div>
+                            <p class="item-time">24分钟</p>
+                        </div>
+                        <div class="item-right">
+                            <p class="item-title">汉堡王</p>
+                            <div class="star-buy">
+                                <div class="item-star">
+                                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                                </div>
+                                <div class="item-buy">
+                                    月售 <span class="item-buy-num">421</span>单
+                                </div>
+                            </div>
+                            <p class="train-money">
+                                配送费￥ <span class="train-money-num">3</span>
+                            </p>
+                            <p class="item-label">
+                                <span class="label-new">新</span>
+                                <span class="label-bao">保</span>
+                                <span class="label-piao">票</span>
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-        <!-- jQuery -->
-        <script src="./js/jquery.js"></script>
-        <!-- Bootstrap JavaScript -->
-        <script src="./js/bootstrap.min.js"></script>
-        <script>
-            $(function(){
-                var $div_li = $("div.login-tabs ul li");
-                $div_li.click(function(){
-                    $(this).addClass("selected")
-                            .siblings().removeClass("selected");
-                var index = $div_li.index(this);
-                $("div.login-content > div")   	//ѡȡ�ӽڵ㡣��ѡȡ�ӽڵ�Ļ������������������滹��div 
-                        .eq(index).show()   //��ʾ <li>Ԫ�ض�Ӧ��<div>Ԫ��
-                        .siblings().hide();
-                })
-		    })
-        </script>
-    </body>
+
+
+    <!-- jQuery -->
+    <script src="./lib//js/jquery.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="./lib//js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $('.index-content .container .search form input').click(function(){
+                $('.index-content .container .search').css('width','230px');
+                return false;
+            })
+            $(document).click(function(){
+                $('.index-content .container .search').css('width','180px');
+            })
+        })
+    </script>
+</body>
 </html>
