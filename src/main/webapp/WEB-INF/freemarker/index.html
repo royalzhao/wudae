@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./lib/css/base.css">
+        <link rel="stylesheet" href="./lib/css/style.css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="container">
+            <div class="login-box">
+                <div class="box-title">
+                    <h1>�Ե�ɶ</h1>
+                    <small>û�³Ե�ɶ</small>
+                </div>
+                <div class="box-content">
+                    <div class="login-tabs">
+                        <ul>
+                            <li class="selected"><a>���ŵ�¼</a></li>
+                            <li><a>�����¼</a></li>
+                        </ul>
+                    </div>
+                    <div class="login-content">
+                        <div>
+                            <form action="" method="POST" role="form">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="" placeholder="�ֻ���">
+                                        <div class="input-group-addon">��ȡ��֤��</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="��֤��">
+                                </div>
+                                <div class="form-group">
+                                    <p>��ܰ��ʾ��δע��Ե�ɶ�˺ŵ��ֻ��ţ���¼ʱ���Զ�ע�ᣬ�Ҵ�������ͬ�� <span>���û�����Э�顷</span> </p>
+                                </div>
+                                 <button type="button" class="btn btn-success btn-block">��¼</button>
+                            </form>
+                        </div>
+                        <div style="display:none">
+                            <form action="" method="POST" role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="�ֻ�/����/�û���">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="" placeholder="����">
+                                </div>
+                                
+                                <button type="button" class="btn btn-success btn-block">��¼</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- jQuery -->
+        <script src="./js/jquery.js"></script>
+        <!-- Bootstrap JavaScript -->
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            $(function(){
+                var $div_li = $("div.login-tabs ul li");
+                $div_li.click(function(){
+                    $(this).addClass("selected")
+                            .siblings().removeClass("selected");
+                var index = $div_li.index(this);
+                $("div.login-content > div")   	//ѡȡ�ӽڵ㡣��ѡȡ�ӽڵ�Ļ������������������滹��div 
+                        .eq(index).show()   //��ʾ <li>Ԫ�ض�Ӧ��<div>Ԫ��
+                        .siblings().hide();
+                })
+		    })
+        </script>
+    </body>
+</html>
