@@ -130,6 +130,10 @@ body{
     display: flex;
     justify-content: flex-start;
     flex-wrap: nowrap;
+    position: relative;
+}
+.index-content .container .main .row .main-item:hover{
+    background: #F3F3F3;
 }
 .index-content .container .main .row .main-item .item-left{
     width: 40%;
@@ -152,6 +156,7 @@ body{
 }
 .index-content .container .main .row .main-item .item-right .star-buy{
     display: flex;
+    flex-wrap: wrap;
 }
 .index-content .container .main .row .main-item .item-right .item-star{
     color: #FFC30C;
@@ -164,17 +169,58 @@ body{
     clear: both;
     font-size:12px;    
 }
-.index-content .container .main .row .main-item .item-right .item-label .label-new{
+.label-new{
     color: #fff;
     background: #E75959;
     padding: 2px;
+    margin: 2px;
 }
-.index-content .container .main .row .main-item .item-right .item-label .label-bao,.index-content .container .main .row .main-item .item-right .item-label .label-piao{
+.label-bao, .label-piao{
     color: #ccc;
     border: 1px solid #ccc;
     padding: 2px;
+    margin: 2px;
 }
-
+/* 鼠标经过模态框 */
+.index-content .container .main .row .main-item .motai{
+    width: 300px;
+    position: absolute;
+    top: 5px;
+    border: 2px  solid #ccc;
+    padding: 15px 10px;
+    background: #fff;
+    z-index: 2;
+}
+.index-content .container .main .row .main-item .motai .motai-title{
+    font-size: 18px;
+    font-family: "黑体";
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.index-content .container .main .row .main-item .motai p{
+    margin: 10px 0;
+    font-size: 12px;
+}
+.index-content .container .main .row .main-item .motai .motai-train{
+    background: #D2CECE;
+    padding: 5px;
+}
+.index-content .container .main .row .main-item .motai .motai-train{
+    display: flex;
+}
+.index-content .container .main .row .main-item .motai .motai-train div{
+    text-align: center;
+    width: 50%;
+    font-size: 12px;
+}
+.index-content .container .main .row .main-item .motai .motai-train div .train-time{
+    color: #E75959;
+}   
+.index-content .container .main .row .main-item .motai .motai-content{
+    margin-top: 10px;
+    color: #666;
+}
 
 
 @media only screen and (min-width:768px ) {

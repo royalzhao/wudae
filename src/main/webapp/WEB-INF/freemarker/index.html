@@ -62,10 +62,10 @@
         <div class="container">
             <div class="fenlei">
                 <div class="row">
-                    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                    <div class="col-lg-1 col-md-2 col-sm-2 col-xs-3">
                         <p>商家分类:</p>
                     </div>
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+                    <div class="col-lg-11 col-md-10 col-sm-10 col-xs-9">
                         <ul>
                             <li class="active"><a href="#">全部商家</a></li>
                             <li><a href="#">美食</a></li>
@@ -82,48 +82,245 @@
                 </div>
             </div>
         </div>
-        
         <div class="container">
             <div class="main">
                 <div class="row">
-                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 main-item">
-                        <div class="item-left">
-                        <#list list as m>
-                            <div class="item-pic">
-                                <img src="./lib/img/shop/shop (1).jpg" alt="">
-                            </div>
-                            <p class="item-time">24分钟</p>
-                        </div>
-                        <div class="item-right">
-                            <p class="item-title">${m.Restaurant_name}</p>
-                            <div class="star-buy">
-                                <div class="item-star">
-                                    <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="main-item">
+                            <div class="item-left">
+                                <div class="item-pic">
+                                    <img src="./lib/img/shop/shop (1).jpg" alt="">
                                 </div>
-                                <div class="item-buy">
-                                    月售 <span class="item-buy-num">421</span>单
-                                </div>
+                                <p class="item-time">24分钟</p>
                             </div>
-                            <p class="train-money">
-                                配送费￥ <span class="train-money-num">3</span>
-                            </p>
-                            <p class="item-label">
-                                <span class="label-new">新</span>
-                                <span class="label-bao">保</span>
-                                <span class="label-piao">票</span>
-                            </p>
+                            <div class="item-right">
+                                <p class="item-title">汉堡王</p>
+                                <div class="star-buy">
+                                    <div class="item-star"> 
+                                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                                    </div>
+                                    <div class="item-buy">
+                                        月售 <span class="item-buy-num">421</span>单
+                                    </div>
+                                </div>
+                                <p class="train-money">
+                                    配送费￥ <span class="train-money-num">3</span>
+                                </p>
+                                <p class="item-label">
+                                    <span class="label-new">新</span>
+                                    <span class="label-bao">保</span>
+                                    <span class="label-piao">票</span>
+                                </p>
+                            </div>
+    
+                            <div class="motai" style="display:none;">
+                                <div class="motai-title">
+                                    汉堡王
+                                </div>
+                                
+                                <p><span class="label-new">新</span>新店开张，欢迎光临</p>
+                                <p><span class="label-bao">保</span>已加入外卖保计划</p>
+                                <div class="motai-train">
+                                    <div>配送费￥<span class="train-money">3</span></div>
+                                    <div>平均<span class="train-time">30</span>分钟送达</div>
+                                </div>
+                                <div class="motai-content">
+                                    汉堡王祝您新春大吉
+                                </div>
+    
+                            </div>
                         </div>
-                        </#list>
+                        
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-
+                        <div class="main-item">
+                            <div class="item-left">
+                                <div class="item-pic">
+                                    <img src="./lib/img/shop/shop (1).jpg" alt="">
+                                </div>
+                                <p class="item-time">24分钟</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-title">汉堡王</p>
+                                <div class="star-buy">
+                                    <div class="item-star"> 
+                                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                                    </div>
+                                    <div class="item-buy">
+                                        月售 <span class="item-buy-num">421</span>单
+                                    </div>
+                                </div>
+                                <p class="train-money">
+                                    配送费￥ <span class="train-money-num">3</span>
+                                </p>
+                                <p class="item-label">
+                                    <span class="label-new">新</span>
+                                    <span class="label-bao">保</span>
+                                    <span class="label-piao">票</span>
+                                </p>
+                            </div>
+    
+                            <div class="motai" style="display:none;">
+                                <div class="motai-title">
+                                    汉堡王
+                                </div>
+                                
+                                <p><span class="label-new">新</span>新店开张，欢迎光临</p>
+                                <p><span class="label-bao">保</span>已加入外卖保计划</p>
+                                <div class="motai-train">
+                                    <div>配送费￥<span class="train-money">3</span></div>
+                                    <div>平均<span class="train-time">30</span>分钟送达</div>
+                                </div>
+                                <div class="motai-content">
+                                    汉堡王祝您新春大吉
+                                </div>
+    
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-
+                        <div class="main-item">
+                            <div class="item-left">
+                                <div class="item-pic">
+                                    <img src="./lib/img/shop/shop (1).jpg" alt="">
+                                </div>
+                                <p class="item-time">24分钟</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-title">汉堡王</p>
+                                <div class="star-buy">
+                                    <div class="item-star"> 
+                                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                                    </div>
+                                    <div class="item-buy">
+                                        月售 <span class="item-buy-num">421</span>单
+                                    </div>
+                                </div>
+                                <p class="train-money">
+                                    配送费￥ <span class="train-money-num">3</span>
+                                </p>
+                                <p class="item-label">
+                                    <span class="label-new">新</span>
+                                    <span class="label-bao">保</span>
+                                    <span class="label-piao">票</span>
+                                </p>
+                            </div>
+    
+                            <div class="motai" style="display:none;">
+                                <div class="motai-title">
+                                    汉堡王
+                                </div>
+                                
+                                <p><span class="label-new">新</span>新店开张，欢迎光临</p>
+                                <p><span class="label-bao">保</span>已加入外卖保计划</p>
+                                <div class="motai-train">
+                                    <div>配送费￥<span class="train-money">3</span></div>
+                                    <div>平均<span class="train-time">30</span>分钟送达</div>
+                                </div>
+                                <div class="motai-content">
+                                    汉堡王祝您新春大吉
+                                </div>
+    
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
-
+                        <div class="main-item">
+                            <div class="item-left">
+                                <div class="item-pic">
+                                    <img src="./lib/img/shop/shop (1).jpg" alt="">
+                                </div>
+                                <p class="item-time">24分钟</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-title">汉堡王</p>
+                                <div class="star-buy">
+                                    <div class="item-star"> 
+                                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                                    </div>
+                                    <div class="item-buy">
+                                        月售 <span class="item-buy-num">421</span>单
+                                    </div>
+                                </div>
+                                <p class="train-money">
+                                    配送费￥ <span class="train-money-num">3</span>
+                                </p>
+                                <p class="item-label">
+                                    <span class="label-new">新</span>
+                                    <span class="label-bao">保</span>
+                                    <span class="label-piao">票</span>
+                                </p>
+                            </div>
+    
+                            <div class="motai" style="display:none;">
+                                <div class="motai-title">
+                                    汉堡王
+                                </div>
+                                
+                                <p><span class="label-new">新</span>新店开张，欢迎光临</p>
+                                <p><span class="label-bao">保</span>已加入外卖保计划</p>
+                                <div class="motai-train">
+                                    <div>配送费￥<span class="train-money">3</span></div>
+                                    <div>平均<span class="train-time">30</span>分钟送达</div>
+                                </div>
+                                <div class="motai-content">
+                                    汉堡王祝您新春大吉
+                                </div>
+    
+                            </div>
+                        </div>
+                        
                     </div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
+                        <div class="main-item">
+                            <div class="item-left">
+                                <div class="item-pic">
+                                    <img src="./lib/img/shop/shop (1).jpg" alt="">
+                                </div>
+                                <p class="item-time">24分钟</p>
+                            </div>
+                            <div class="item-right">
+                                <p class="item-title">汉堡王</p>
+                                <div class="star-buy">
+                                    <div class="item-star"> 
+                                        <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
+                                    </div>
+                                    <div class="item-buy">
+                                        月售 <span class="item-buy-num">421</span>单
+                                    </div>
+                                </div>
+                                <p class="train-money">
+                                    配送费￥ <span class="train-money-num">3</span>
+                                </p>
+                                <p class="item-label">
+                                    <span class="label-new">新</span>
+                                    <span class="label-bao">保</span>
+                                    <span class="label-piao">票</span>
+                                </p>
+                            </div>
+    
+                            <div class="motai" style="display:none;">
+                                <div class="motai-title">
+                                    汉堡王
+                                </div>
+                                
+                                <p><span class="label-new">新</span>新店开张，欢迎光临</p>
+                                <p><span class="label-bao">保</span>已加入外卖保计划</p>
+                                <div class="motai-train">
+                                    <div>配送费￥<span class="train-money">3</span></div>
+                                    <div>平均<span class="train-time">30</span>分钟送达</div>
+                                </div>
+                                <div class="motai-content">
+                                    汉堡王祝您新春大吉
+                                </div>
+    
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -145,6 +342,32 @@
             $(document).click(function(){
                 $('.index-content .container .search').css('width','180px');
             })
+           
+
+            // 鼠标经过店铺弹出相关信息
+            var bodyWidth = $(document).width();
+            if(bodyWidth>960){
+                $('.main-item').each(function(){
+                    $(this).on('mouseover',function(){
+                        var left = $(this).offset().left;
+                        var width = ($('.container').width()/4)*3;
+                        if(left>width){
+                            $(this).find('.motai').css('left','-300px')
+                            $(this).find('.motai').css('display','block')
+                            console.log($(this).offset().right)
+                        }else{
+                            $(this).find('.motai').css('right','-300px')
+                            $(this).find('.motai').css('display','block')
+                            console.log($(this).offset().right)
+                        }
+                    })
+                    $(this).on('mouseout',function(){
+                        $(this).find('.motai').css('display','none')
+                    })
+                })
+            }
+            
+           
         })
     </script>
 </body>
