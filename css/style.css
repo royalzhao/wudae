@@ -1,0 +1,61 @@
+.login-box{
+    max-width: 350px;
+    margin: 0 auto;
+}
+/* login头部 */
+.login-box .box-title{
+    text-align: center;
+    margin-top: 10%;
+}
+.login-box .box-title h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-box .box-content{
+    margin-top: 20px;
+}
+/* login选项卡部分 */
+.login-box .box-content .login-tabs li{
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+}
+.login-box .box-content .login-tabs li a{
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+.login-box .box-content .login-tabs li.selected a{
+    color: #EC971F;
+    border-bottom: 2px solid #EC971F;
+    padding-bottom: 5px;
+}
+.login-box .box-content .login-tabs li a:hover{
+    text-decoration: none;
+}
+.login-box .box-content .login-content{
+    margin-top: 30px;
+}
+.login-box .box-content .login-content div .form-group p{
+    color: #999;
+}
+.login-box .box-content .login-content div .form-group p span{
+    color: #EC971F;
+    cursor: pointer;
+}
+.form-control:focus{
+    border-color: rgba(236, 151, 31, 0.80);
+    webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(236,151,31,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(236,151,31,.6);
+}
+.input-group-addon{
+    cursor: pointer;
+}
+.form-control{
+    height: 45px;
+}
+.btn{
+    padding:11px 12px;
+}
+
