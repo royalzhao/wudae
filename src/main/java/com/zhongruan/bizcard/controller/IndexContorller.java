@@ -34,14 +34,14 @@ public class IndexContorller {
 	public String login(){
 		return "login";
 	}
-	@RequestMapping(value="/add")
-	public String add(){
-		return "add";
+
+	@RequestMapping(value="/content")
+	public String content(){
+		return "content";
 	}
 
 
-
-	//²éÑ¯
+	//ï¿½ï¿½Ñ¯
 	@Autowired
 	ContactService contactservice;
 	@RequestMapping(value="/index")
@@ -63,7 +63,7 @@ public class IndexContorller {
 	}
 
 
-	//Ôö¼Ó
+	//ï¿½ï¿½ï¿½ï¿½
 	@PostMapping("add2")
 	//@GetMapping("add2")
 	@ResponseBody
@@ -78,7 +78,7 @@ public class IndexContorller {
 	}
 
 
-	//É¾³ý
+	//É¾ï¿½ï¿½
 	@GetMapping("/shan")
 	public String shan(
 			@RequestParam(value="sid",defaultValue="")String sid
@@ -86,7 +86,7 @@ public class IndexContorller {
 		contactservice.shan(sid);
 		return "redirect:/index";
 	}
-	//µÇÂ¼ÑéÖ¤
+	//ï¿½ï¿½Â¼ï¿½ï¿½Ö¤
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	@ResponseBody
 	public Map<String,String> loginPost(
@@ -104,8 +104,8 @@ public class IndexContorller {
 		}
 		session.setAttribute("result", result);
 		map.put("message", "OK"); 
-		// °ÑidµÄÄÚÈÝ±£´æµ½Session¡¢Cookie»ò·µ»Øtoken
-		// redirect: ´ú±íÌø×ªµ½ÈçÏÂÒ³Ãæ
+		// ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½Ý±ï¿½ï¿½æµ½Sessionï¿½ï¿½Cookieï¿½ò·µ»ï¿½token
+		// redirect: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 		return map;
 	}
 
@@ -121,15 +121,15 @@ public Map<String, String> login1(
 		session.setAttribute("user",user);
 		 Map<String, String> map = new HashMap();
 
-		    // ÅÐ¶ÏcounterµÄÊýÁ¿£¬Èç¹û²»µÈÓÚÒ»£¬ËµÃ÷Ã»ÓÐÏà·ûµÄÕËºÅ»òÕßÊý¾ÝÒì³£
+		    // ï¿½Ð¶ï¿½counterï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ëµï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËºÅ»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ì³£
 		    if (!"1".equals(user.get("counter").toString())) {
-		      // Êý¾Ý³ö´í£¬ÖØ¶¨Ïòµ½µÇÂ¼µÄurl
+		      // ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½òµ½µï¿½Â¼ï¿½ï¿½url
 		      map.put("message", "ERROR");
 		      return map;
 		    }
 		    map.put("message", "OK");
-		    // °ÑidµÄÄÚÈÝ±£´æµ½Session¡¢Cookie»ò·µ»Øtoken
-		    // redirect: ´ú±íÌø×ªµ½ÈçÏÂÒ³Ãæ
+		    // ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½Ý±ï¿½ï¿½æµ½Sessionï¿½ï¿½Cookieï¿½ò·µ»ï¿½token
+		    // redirect: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 		    return map;
 		  }
 	 */
@@ -144,13 +144,13 @@ public Map<String, String> login1(
 		Map<String,Object> user = contactservice.yanzheng(qqq);
 		Map<String,String> map = new HashMap();
 		 if (!"1".equals(user.get("counter").toString())) {
-		      // Êý¾Ý³ö´í£¬ÖØ¶¨Ïòµ½µÇÂ¼µÄurl
+		      // ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½ï¿½Ø¶ï¿½ï¿½òµ½µï¿½Â¼ï¿½ï¿½url
 		      map.put("message", "OK");
 		      return map;
 		    }
 		  map.put("message", "ELL");
-		    // °ÑidµÄÄÚÈÝ±£´æµ½Session¡¢Cookie»ò·µ»Øtoken
-		    // redirect: ´ú±íÌø×ªµ½ÈçÏÂÒ³Ãæ
+		    // ï¿½ï¿½idï¿½ï¿½ï¿½ï¿½ï¿½Ý±ï¿½ï¿½æµ½Sessionï¿½ï¿½Cookieï¿½ò·µ»ï¿½token
+		    // redirect: ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½
 		    return map;
 	}
 	 

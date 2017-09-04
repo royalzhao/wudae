@@ -221,14 +221,14 @@ body{
     margin-top: 10px;
     color: #666;
 }
-
+.navbar{
+    min-height: 70px;
+    border: 0;
+    background: #F4A435;
+}
 
 @media only screen and (min-width:768px ) {
-    .navbar{
-        min-height: 70px;
-        border: 0;
-        background: #F4A435;
-    }
+    
     .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
         background: #F0910A;
     }
