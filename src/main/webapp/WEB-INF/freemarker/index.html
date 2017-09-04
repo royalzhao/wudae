@@ -82,18 +82,20 @@
                 </div>
             </div>
         </div>
+        
         <div class="container">
             <div class="main">
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 main-item">
                         <div class="item-left">
+                        <#list list as m>
                             <div class="item-pic">
                                 <img src="./lib/img/shop/shop (1).jpg" alt="">
                             </div>
                             <p class="item-time">24分钟</p>
                         </div>
                         <div class="item-right">
-                            <p class="item-title">汉堡王</p>
+                            <p class="item-title">${m.Restaurant_name}</p>
                             <div class="star-buy">
                                 <div class="item-star">
                                     <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
@@ -111,7 +113,7 @@
                                 <span class="label-piao">票</span>
                             </p>
                         </div>
-                        
+                        </#list>
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
 
