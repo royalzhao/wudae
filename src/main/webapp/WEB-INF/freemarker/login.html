@@ -48,7 +48,7 @@
 									温馨提示：未注册吃点啥账号的手机号，登录时将自动注册，且代表您已同意 <span>《用户服务协议》</span>
 								</p>
 							</div>
-							<button type="button" class="btn btn-success btn-block login-btn">登录</button>
+							<button type="button" class="btn btn-success btn-block login-btn" id="phone-btn">登录</button>
 						</form>
 					</div>
 					<div style="display: none">
@@ -62,7 +62,7 @@
 									placeholder="密码">
 							</div>
 
-							<button type="button" class="btn btn-success btn-block login-btn">登录</button>
+							<button type="button" class="btn btn-success btn-block login-btn" id="pass-btn">登录</button>
 						</form>
 					</div>
 				</div>
@@ -75,8 +75,10 @@
 	<script src="./lib/js/jquery.js"></script>
 	<!-- Bootstrap JavaScript -->
 	<script src="./lib/js/bootstrap.min.js"></script>
+	<script src="./lib/layer/layer.js"></script>
 	<script>
             $(function(){
+				//选项卡切换
                 var $div_li = $("div.login-tabs ul li");
                 $div_li.click(function(){
                     $(this).addClass("selected")
@@ -86,10 +88,16 @@
                         .eq(index).show()   //显示 <li>元素对应的<div>元素
                         .siblings().hide();
                 })
+
+				//块状元素垂直居中
                 var top=($(document).height() - $('.login-box').height())/4;
                 $('.login-box').css('top',top)
 
-                $('.login-btn').click(function(){
+				//按钮点击事件
+				$('#phone-btn').click(function(){
+					layer.msg('功能正在完善中···',{icon:5}); 
+				})
+                $('#pass-btn').click(function(){
                     $.ajax({
                         url:'Login',
                         data:{
@@ -101,7 +109,7 @@
                             if(res.message == 'ok'){
                             	window.location.href = 'index'
                             }else{
-                            	alert("密码错误")
+                            	layer.msg('亲，请检查您的密码哦^_^',{icon:5}); 
                     $.ajax({
                     	url:'uname',
                     	data:{
@@ -111,9 +119,10 @@
                        	success:function(resp){
                        		console.log(resp)
                        		if(resp.messages == 'ok'){
-                       			alert("用户已存在")
+								layer.msg('亲，请检查您的密码哦^_^',{icon:5}); 
+								window.location.href = 'login'
                        		}else{
-                       			alert("用户未存在，自动注册账号")
+								layer.msg('亲，您的账号未检测到，系统将自动给您注册...',{icon:6}); 
                        			$.ajax({
                        				url:'add',
                        				data:{
