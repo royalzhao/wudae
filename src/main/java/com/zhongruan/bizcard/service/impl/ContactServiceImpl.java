@@ -1,7 +1,6 @@
 package com.zhongruan.bizcard.service.impl;
 
 import com.zhongruan.bizcard.dao.ContactDao;
-import com.zhongruan.bizcard.entity.ContactEntity;
 import com.zhongruan.bizcard.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Param;
 
-import com.zhongruan.bizcard.entity.ContactEntity;
+
 
 public interface ContactService {
 

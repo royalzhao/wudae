@@ -1,6 +1,5 @@
 package com.zhongruan.bizcard.dao;
 
-import com.zhongruan.bizcard.entity.ContactEntity;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 

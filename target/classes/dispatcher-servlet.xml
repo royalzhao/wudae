@@ -68,8 +68,8 @@
 
   <!--声明静态文件的默认处理方式-->
   <mvc:default-servlet-handler/>
-<!-- 
  
+ <!-- 
   <mvc:interceptors>
     <mvc:interceptor>
       <mvc:mapping path="/*"/>
@@ -77,8 +77,7 @@
         <property name="excludeUrls">
           <list>
             <value>/login</value>
-             <value>/add</value>
-              <value>/IndexContorller</value>
+            
           </list>
         </property>
       </bean>
