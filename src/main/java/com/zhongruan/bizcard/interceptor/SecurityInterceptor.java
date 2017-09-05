@@ -10,7 +10,7 @@ import java.util.List;
 
 public class SecurityInterceptor implements HandlerInterceptor {
 
-  // ±£´æÀýÍâµÄurl£¬±ÈÈçloginºÍregister
+  // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½urlï¿½ï¿½ï¿½ï¿½ï¿½ï¿½loginï¿½ï¿½register
   private List<String> excludeUrls;
 
   public List<String> getExcludeUrls() {
@@ -20,7 +20,7 @@ public class SecurityInterceptor implements HandlerInterceptor {
   public void setExcludeUrls(List<String> excludeUrls) {
     this.excludeUrls = excludeUrls;
   }
-  // ¿Í»§¶Ë·¢ÆðµÄÇëÇóÔÚµ½´ïcontrollerÇ°´¥·¢£¬À¹½Ø¸ÃÇëÇó
+  // ï¿½Í»ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½controllerÇ°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½ï¿½
 public boolean preHandle(HttpServletRequest request,
 	      HttpServletResponse response, Object handler) throws Exception {
 	 String requestUri = request.getRequestURI();
@@ -37,7 +37,6 @@ public boolean preHandle(HttpServletRequest request,
 	    }
 	    return true;
 	  }
-// ÇëÇó±»controller½ÓÊÕºó´¥·¢
 public void postHandle(
 	      HttpServletRequest request,
 	      HttpServletResponse response,
@@ -45,7 +44,6 @@ public void postHandle(
 	      ModelAndView mav
 	  ) throws Exception {}
 
-// ÇëÇóºÍÏìÓ¦´¦ÀíÍê±Ïºó´¥·¢
 public void afterCompletion (
 	      HttpServletRequest request,
 	      HttpServletResponse response,

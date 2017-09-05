@@ -1,6 +1,0 @@
-com\zhongruan\bizcard\service\impl\ContactServiceImpl.class
-com\zhongruan\bizcard\dao\ContactDao.class
-com\zhongruan\bizcard\interceptor\SecurityInterceptor.class
-com\zhongruan\bizcard\service\ContactService.class
-com\zhongruan\bizcard\controller\IndexContorller.class
-com\zhongruan\bizcard\entity\ContactEntity.class

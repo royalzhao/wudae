@@ -1,77 +1,81 @@
 
 <!DOCTYPE html>
 <html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>登录/注册</title>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>登录/注册</title>
 
-        <!-- Bootstrap CSS -->
-        <link href="./lib/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="./lib/css/base.css">
-        <link rel="stylesheet" href="./lib/css/style.css">
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
+<!-- Bootstrap CSS -->
+<link href="./lib/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./lib/css/base.css">
+<link rel="stylesheet" href="./lib/css/style.css">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
             <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
-    <body>
-        <div class="container">
-            <div class="login-box">
-                <div class="box-title">
-                   <img src="/lib/img/logo.png" alt="">
-                </div>
-                <div class="box-content">
-                    <div class="login-tabs">
-                        <ul>
-                            <li class="selected"><a>短信登录</a></li>
-                            <li><a>密码登录</a></li>
-                        </ul>
-                    </div>
-                    <div class="login-content">
-                        <div>
-                            <form action="" method="POST" role="form">
-                                <div class="form-group">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" id="" placeholder="手机号">
-                                        <div class="input-group-addon">获取验证码</div>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="" placeholder="验证码">
-                                </div>
-                                <div class="form-group">
-                                    <p>温馨提示：未注册吃点啥账号的手机号，登录时将自动注册，且代表您已同意 <span>《用户服务协议》</span> </p>
-                                </div>
-                                 <button type="button" class="btn btn-success btn-block login-btn">登录</button>
-                            </form>
-                        </div>
-                        <div style="display:none">
-                            <form method="POST" role="form">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="account" placeholder="手机/邮箱/用户名">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="password" placeholder="密码">
-                                </div>
-                                
-                                <button type="button" class="btn btn-success btn-block login-btn">登录</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+</head>
+<body>
+	<div class="container">
+		<div class="login-box">
+			<div class="box-title">
+				<img src="/lib/img/logo.png" alt="">
+			</div>
+			<div class="box-content">
+				<div class="login-tabs">
+					<ul>
+						<li class="selected"><a>短信登录</a></li>
+						<li><a>密码登录</a></li>
+					</ul>
+				</div>
+				<div class="login-content">
+					<div>
+						<form action="" method="POST" role="form">
+							<div class="form-group">
+								<div class="input-group">
+									<input type="text" class="form-control" id="" placeholder="手机号">
+									<div class="input-group-addon">获取验证码</div>
+								</div>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="" placeholder="验证码">
+							</div>
+							<div class="form-group">
+								<p>
+									温馨提示：未注册吃点啥账号的手机号，登录时将自动注册，且代表您已同意 <span>《用户服务协议》</span>
+								</p>
+							</div>
+							<button type="button" class="btn btn-success btn-block login-btn">登录</button>
+						</form>
+					</div>
+					<div style="display: none">
+						<form method="POST" role="form">
+							<div class="form-group">
+								<input type="text" class="form-control" id="account"
+									placeholder="手机/邮箱/用户名">
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="password"
+									placeholder="密码">
+							</div>
+
+							<button type="button" class="btn btn-success btn-block login-btn">登录</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 
-        <!-- jQuery -->
-        <script src="./lib//js/jquery.js"></script>
-        <!-- Bootstrap JavaScript -->
-        <script src="./lib//js/bootstrap.min.js"></script>
-        <script>
+	<!-- jQuery -->
+	<script src="./lib/js/jquery.js"></script>
+	<!-- Bootstrap JavaScript -->
+	<script src="./lib/js/bootstrap.min.js"></script>
+	<script>
             $(function(){
                 var $div_li = $("div.login-tabs ul li");
                 $div_li.click(function(){
@@ -87,14 +91,44 @@
 
                 $('.login-btn').click(function(){
                     $.ajax({
-                        url:'',
+                        url:'Login',
                         data:{
                             account:$('#account').val(),
-                            password:$('#passoword').val()
+                            password:$('#password').val()
                         },
                         type:'post',
-                        success:function(data){
-                            
+                        success:function(res){
+                            if(res.message == 'ok'){
+                            	window.location.href = 'index'
+                            }else{
+                            	alert("密码错误")
+                    $.ajax({
+                    	url:'uname',
+                    	data:{
+                            account:$('#account').val(),
+                        },
+                        type:'post',
+                       	success:function(resp){
+                       		console.log(resp)
+                       		if(resp.messages == 'ok'){
+                       			alert("用户已存在")
+                       		}else{
+                       			alert("用户未存在，自动注册账号")
+                       			$.ajax({
+                       				url:'add',
+                       				data:{
+                       					account:$('#account').val(),
+                                        password:$('#password').val()
+                       				},
+                       				type:'post',
+                       				success:function(data){
+                       					window.location.href = 'index'
+                       				}
+                       			})
+                       		}
+                       	}
+                    })
+                            }
                         },
                         error:function(){
                             console.log('网络错误！');
@@ -104,5 +138,5 @@
                 
 		    })
         </script>
-    </body>
+</body>
 </html>

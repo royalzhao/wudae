@@ -1,7 +1,6 @@
 package com.zhongruan.bizcard.service.impl;
 
 import com.zhongruan.bizcard.dao.ContactDao;
-import com.zhongruan.bizcard.entity.ContactEntity;
 import com.zhongruan.bizcard.service.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,33 +16,21 @@ public class ContactServiceImpl implements ContactService {
   @Autowired
   ContactDao contactDao;
 
-  
-  public List<ContactEntity> findByName(String name) {
-    return contactDao.findByName(name);
-  }
-  
-public List<ContactEntity> findAll() {
+public Map<String, Object> userlogin(String user_name, String user_password) {
 	// TODO Auto-generated method stub
-	return contactDao.findAll();
+	return contactDao.userlogin(user_name, user_password);
 }
 
-public void add(String sid,String sname,String age) {
-	contactDao.add(sid,sname,age);
-}
-
-public void shan(String sid) {
-	contactDao.shan(sid);
-}
-
-public Map<String, Object> login(String sid,String age) {
+public void add(String user_name, String user_password) {
 	// TODO Auto-generated method stub
-	return contactDao.login(sid,age);
+	contactDao.add(user_name, user_password);
 }
 
-public Map<String,Object> yanzheng(String sid) {
+public Map<String, Object> uname(String user_name) {
 	// TODO Auto-generated method stub
-	return contactDao.yanzheng(sid);
+	return contactDao.uname(user_name);
 }
+
 
 
 

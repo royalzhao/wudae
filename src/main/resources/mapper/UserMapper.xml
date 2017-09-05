@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+    "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zhongruan.bizcard.dao.UserDao">
+  <select id="Merchant" resultType="com.zhongruan.bizcard.entity.MerchantEntity">
+    select * from restaurant 
+  </select>
+  <select id="Commodity" resultType="com.zhongruan.bizcard.entity.MerchantEntity">
+    select * from restaurant where Restaurant_number
+  </select>
+  <select id="findByName" resultType="com.zhongruan.bizcard.entity.MerchantEntity">
+    select *
+    from restaurant
+    where locate(#{keyword}, sname) > 0
+  </select>
+   <select id="Cuisine" resultType="com.zhongruan.bizcard.entity.CuisineEntity">
+    select * from cuisine 
+  </select>
+  <select id="Menu" resultType="java.util.Map">
+  select * from menu where cuisine_number=#{cuisine_number}
+  </select>
+</mapper>  
