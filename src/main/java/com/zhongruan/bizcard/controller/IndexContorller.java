@@ -31,17 +31,27 @@ public class IndexContorller {
 	private final Logger logger = LoggerFactory.getLogger(IndexContorller.class);
 	@Autowired
 	ContactService service;
-	//Ê×Ò³
+	//ï¿½ï¿½Ò³
 	@RequestMapping(value="index")
 	public String index() {
 		return "index";
 	}
-	//µÇÂ½
+	//ï¿½ï¿½Â½
 	@RequestMapping(value="/")
 	public String login() {
 		return "login";
 	}
-	//µÇÂ½ÑéÖ¤
+	//æŸ¥è¯¢
+	@RequestMapping(value="search")
+	public String search() {
+		return "search";
+	}
+	// //login
+	// @RequestMapping(value="login")
+	// public String login() {
+	// 	return "login";
+	// }
+	//ï¿½ï¿½Â½ï¿½ï¿½Ö¤
 	@PostMapping(value="Login")
 	@ResponseBody
 	public Map<String, String> Login(
@@ -61,7 +71,7 @@ public class IndexContorller {
 		map.put("message", "ok");
 		return map;
 	}
-	//µ¥²é
+	//ï¿½ï¿½ï¿½ï¿½
 	@PostMapping(value="uname")
 	@ResponseBody
 	public Map<String, String> uname(@RequestParam(value="account",defaultValue="") String user_name,HttpServletRequest request) {
@@ -78,7 +88,7 @@ public class IndexContorller {
 		System.out.println("ssss"+map);
 		return map;
 	}
-	//×¢²á
+	//×¢ï¿½ï¿½
 	@PostMapping(value="add")
 	@ResponseBody
 	public String add(@RequestParam(value="account",defaultValue="") String user_name,
