@@ -1,0 +1,266 @@
+body{
+    height: 100%;
+    width: 100%;
+    background: #F7F7F7;
+}
+.login-box{
+    max-width: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+/* login头部 */
+.login-box .box-title{
+    text-align: center;
+    margin-top: 10%;
+}
+.login-box .box-title h1{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.login-box .box-content{
+    margin-top: 20px;
+}
+/* login选项卡部分 */
+.login-box .box-content .login-tabs li{
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+}
+.login-box .box-content .login-tabs li a{
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+}
+.login-box .box-content .login-tabs li.selected a{
+    color: #EC971F;
+    border-bottom: 2px solid #EC971F;
+    padding-bottom: 5px;
+}
+.login-box .box-content .login-tabs li a:hover{
+    text-decoration: none;
+}
+.login-box .box-content .login-content{
+    margin-top: 30px;
+}
+.login-box .box-content .login-content div .form-group p{
+    color: #999;
+}
+.login-box .box-content .login-content div .form-group p span{
+    color: #EC971F;
+    cursor: pointer;
+}
+.login-box .box-content .login-content div form .login-btn{
+    margin-top:30px; 
+}
+.form-control:focus{
+    border-color: rgba(236, 151, 31, 0.80);
+    webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(236,151,31,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(236,151,31,.6);
+}
+.input-group-addon{
+    cursor: pointer;
+}
+.form-control{
+    height: 45px;
+}
+.btn{
+    padding:11px 12px;
+}
+.index-content .container .search{
+	padding: 5px 0;
+	border-radius: 5px;
+	background: #fff;
+	transition: all 0.45s ease-in-out;	
+	position: relative;
+	width: 180px;
+	height: 30px;
+    border:  1px solid #ccc;
+}
+.index-content .container .search form input{
+	border: 0;
+	background: #fff;
+	position: absolute;	
+	padding-left: 10px;
+}
+
+.index-content .container .search form .button{
+	background:transparent;
+	border:0 ;
+	position: absolute;
+	right: 5px;
+}
+.index-content .container .search .button:hover span{
+	color: #27C978;
+}
+.index-content .container .fenlei{
+    clear: both;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+.index-content .container .fenlei .row div:nth-of-type(1) p{
+    color: #ccc;
+    line-height: 40px;
+}
+.index-content .container .fenlei .row div:nth-of-type(2) ul li{
+    display: inline-block;
+}
+
+.index-content .container .fenlei .row div:nth-of-type(2) ul li a{
+    display: block;
+    padding: 5px;
+    color: #666;
+}
+.index-content .container .fenlei .row div:nth-of-type(2) ul li a:hover{
+    text-decoration: none;
+    background: #F3F3F3;
+}
+.index-content .container .fenlei .row div:nth-of-type(2) ul li.active a{
+    background: #F3F3F3;
+    padding: 10px;
+}
+.index-content .container .main{
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-top: 20px;
+}
+.index-content .container .main .row .main-item{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    position: relative;
+}
+.index-content .container .main .row .main-item:hover{
+    background: #F3F3F3;
+}
+.index-content .container .main .row .main-item .item-left{
+    width: 40%;
+    text-align: center;
+    padding: 20px 0;
+}
+.index-content .container .main .row .main-item .item-left .item-time{
+    color: #999999;
+}
+.index-content .container .main .row .main-item .item-right{
+    padding: 20px 0;
+}
+.index-content .container .main .row .main-item .item-right p{
+    margin: 5px 0;
+}
+.index-content .container .main .row .main-item .item-right .item-title{
+    font-size: 18px;
+    font-family: "黑体";
+    font-weight: bold;
+}
+.index-content .container .main .row .main-item .item-right .star-buy{
+    display: flex;
+    flex-wrap: wrap;
+}
+.index-content .container .main .row .main-item .item-right .item-star{
+    color: #FFC30C;
+}
+.index-content .container .main .row .main-item .item-right .item-buy{
+    font-size:12px;    
+    margin-left: 10px;
+}
+.index-content .container .main .row .main-item .item-right .train-money{
+    clear: both;
+    font-size:12px;    
+}
+.label-new{
+    color: #fff;
+    background: #E75959;
+    padding: 2px;
+    margin: 2px;
+}
+.label-bao, .label-piao{
+    color: #ccc;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin: 2px;
+}
+/* 鼠标经过模态框 */
+.index-content .container .main .row .main-item .motai{
+    width: 300px;
+    position: absolute;
+    top: 5px;
+    border: 2px  solid #ccc;
+    padding: 15px 10px;
+    background: #fff;
+    z-index: 2;
+}
+.index-content .container .main .row .main-item .motai .motai-title{
+    font-size: 18px;
+    font-family: "黑体";
+    font-weight: bold;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+.index-content .container .main .row .main-item .motai p{
+    margin: 10px 0;
+    font-size: 12px;
+}
+.index-content .container .main .row .main-item .motai .motai-train{
+    background: #D2CECE;
+    padding: 5px;
+}
+.index-content .container .main .row .main-item .motai .motai-train{
+    display: flex;
+}
+.index-content .container .main .row .main-item .motai .motai-train div{
+    text-align: center;
+    width: 50%;
+    font-size: 12px;
+}
+.index-content .container .main .row .main-item .motai .motai-train div .train-time{
+    color: #E75959;
+}   
+.index-content .container .main .row .main-item .motai .motai-content{
+    margin-top: 10px;
+    color: #666;
+}
+
+
+@media only screen and (min-width:768px ) {
+    .navbar{
+        min-height: 70px;
+        border: 0;
+        background: #F4A435;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+        background: #F0910A;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav > li > a{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+        background: #F0910A;
+        color:#fff;
+    }
+    .navbar-brand{
+        height: 69px;
+    }
+    .nav > li > a{
+        padding: 10px 30px;
+        
+    }
+    .navbar-nav > li > a{
+        padding-top: 25px;
+        padding-bottom: 24px;
+        color: #fff;
+    }
+}
+@media only screen and (max-width:768px ) {
+    .navbar-toggle{
+        margin-top: 18px;
+    }
+    .navbar{
+        min-height: 70px;
+    }
+
+}
