@@ -149,7 +149,6 @@
                                         </p>
                                         <p>￥<span>40.8</span> </p>
                                         <button class="addShopCar">加入购物车</button>
-                                        <div class="num-group" style="display:none"><span class="num-group-del">-</span><input type="text" class="food-num" value="1"><span class="num-group-add">+</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +169,6 @@
                                         </p>
                                         <p>￥<span>10.8</span> </p>
                                         <button class="addShopCar">加入购物车</button>
-                                        <div class="num-group" style="display:none"><span class="num-group-del">-</span><input type="text" class="food-num" value="1"><span class="num-group-add">+</span></div>
                                     </div>
                                 </div>
                             </div>
@@ -298,7 +296,7 @@
                 <ul>
                     <li class="shopCar-icon">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
-                        <span>1</span>
+                        <span class="numRed">0</span>
                     </li>
                     <li class="shopCar-sum">
                         <span>￥</span> 
@@ -340,6 +338,8 @@
             // 购物车功能模块
             total();
             adddel();
+            late();
+            numRed();
             $('#shopCar-money').click(function(){
                 $('.shopCar-content').slideToggle();
                 $('.shopCar-body').css('display','block');
@@ -356,9 +356,10 @@
                     $('.shopCar-body').css('display','block');
                     var str =  '<li><span class="food-name">'+$(this).prev().prev().prev().prev().text()+'</span><span style="display:none;">'+$(this).prev().children().text()+'</span><div class="num-group"><span class="num-group-del">-</span><input type="text" class="food-num" value="1"><span class="num-group-add">+</span></div><span class="food-money">'+$(this).prev().children().text()+'</span></li>';
                     $('.food-body').append(str);
-                    total()
-                    adddel()
-                    late()
+                    total();
+                    adddel();
+                    late();
+                    numRed();
                 })
             })
             // 清空
@@ -368,7 +369,8 @@
                 if($(".food-body li").length == 0) {
                     $(".shopCar-sumTotal").text(0);
                 }
-                late()
+                late();
+                $(".numRed").text(0);
             })
             
 
@@ -386,6 +388,7 @@
         　　});   
         };
 
+        //计算总额
         function total(){
             var sum = 0;
             $('.food-money').each(function(){
@@ -397,7 +400,7 @@
         }
         //计算总额是否可以购买
         function late(){
-            var late = parseFloat($('.shopCar-buy-late').text())-parseFloat($('.shopCar-sumTotal').text());
+            var late = 18-parseFloat($('.shopCar-sumTotal').text());
             var late1 = Math.round(late*100)/100;
             if(late1>=0){
                 $('.goBuy').css('display','none');
@@ -408,7 +411,14 @@
                 $('.lateBuy').css('display','none');
             }
         }
-
+        //红色标记
+        function numRed(){
+            var sumR = 0;
+            $('.food-num').each(function(){
+                sumR += parseInt($(this).val());
+                $(".numRed").text(sumR);
+            })
+        }
        
         function adddel(){
             //小计和加减
@@ -423,6 +433,8 @@
                     $multi1 = Math.round($multi*100)/100
                     $(this).parent().next().text($multi1);
                     total();
+                    late();
+                    numRed();
                 })
 
             })
@@ -432,15 +444,16 @@
                     var $multi1 = 0;
                     var vall1 = $(this).next().val();
                     vall1--;
-                    if(vall1 <= 0) {
+                    if(vall1 < 0) {
+                        vall1 = 0;
                         $(this).parent().parent().remove();
-                        total();
-                    }else{
-                        $(this).next().val(vall1);
-                        $multi1 = parseFloat(vall1) * parseFloat($(this).parent().prev().text());
-                        $(this).parent().next().text(Math.round($multi1));
-                        total();
                     }
+                    $(this).next().val(vall1);
+                    $multi1 = parseFloat(vall1) * parseFloat($(this).parent().prev().text());
+                    $(this).parent().next().text(Math.round($multi1));
+                    total();
+                    late();
+                    numRed();
                    
                 })
 
