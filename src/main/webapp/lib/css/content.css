@@ -220,6 +220,21 @@ body{
    bottom: 10px;
    border: 0;
 }
+.content-body .container .row .content-body-main .row .content-body-main-item .content-body-main-itemContent .num-group{
+    position: absolute;
+    right: 5px;
+    bottom: 10px;
+}
+.content-body .container .row .content-body-main .row .content-body-main-item .content-body-main-itemContent .num-group span{
+    border: 1px solid #EFE9E9;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+.content-body .container .row .content-body-main .row .content-body-main-item .content-body-main-itemContent .num-group input{
+    width: 20px;
+    text-align: center;
+    border: 1px solid #EFE9E9;
+}
 .content-body .container .row .content-body-main{
     margin: 20px 0;
 }
@@ -301,6 +316,133 @@ body{
     color: #F4A435;
 }
 /* 模态框结束 */
+
+/* 购物车 */
+.shopCar{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    border-top: 2px solid #F4A435;
+}
+.shopCar .shopCar-content .shopCar-head{
+    padding: 10px;
+    background: #FAFAFA;
+    overflow: hidden;
+}
+.shopCar .shopCar-content .shopCar-head .head-left span{
+    color: #F4A435;
+    cursor: pointer;
+}
+.shopCar .shopCar-foot{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.shopCar .shopCar-foot .shopCar-money{
+    flex-grow: 4;
+    background: #2C2C2C;
+    color: #ccc;
+}
+.shopCar .shopCar-foot .shopCar-money ul{
+    padding: 10px;
+}
+.shopCar .shopCar-foot .shopCar-money ul li{
+    display: inline-block;
+}
+.shopCar .shopCar-foot .shopCar-money .shopCar-icon{
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+}
+.shopCar .shopCar-foot .shopCar-money ul .shopCar-icon span{
+    border-radius: 10px;
+    display: block;
+    width: 14px;
+    font-size: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: #FF2828;
+    position: absolute;
+    top: 0;
+    right: -7px;
+}
+.shopCar .shopCar-foot .shopCar-money ul .shopCar-sum{
+    margin-left: 3px;
+}
+.shopCar .shopCar-foot .shopCar-money ul .shopCar-sum span:nth-of-type(2){
+    font-size: 20px;
+}
+.shopCar .shopCar-foot .shopCar-money ul .shopCar-tra{
+    font-size: 12px;
+    color: #666;
+    border-left: 1px solid #666;
+    padding-left:5px; 
+}
+.shopCar .shopCar-foot .shopCar-buy{
+    flex-grow: 3;
+    background: #E4E4E4;
+    color: #666;
+    text-align: center;
+}
+.shopCar .shopCar-foot .shopCar-buy p{
+    line-height: 45px;
+}
+.shopCar .shopCar-foot .shopCar-buy .goBuy a{
+    color: #51D862;
+}
+.shopCar .shopCar-foot .shopCar-buy .goBuy a:hover{
+    color: #1ADE33;
+    text-decoration: none;
+}
+.shopCar .shopCar-foot .shopCar-money{
+    cursor: pointer;
+}
+.shopCar .shopCar-body .defalut-body{
+    text-align: center;
+    font-size: 30px;
+    color: #999;
+    padding: 30px 0;
+    background: #fff;
+}
+.shopCar .shopCar-body .defalut-body p{
+    font-size: 14px;
+}
+.shopCar .shopCar-body .food-body li{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 10px 7px;
+    border-top: 1px solid #EFE9E9;
+    background: #fff;
+    color: #666;
+}
+.shopCar .shopCar-body .food-body li .food-name{
+    order: 1;
+}
+.shopCar .shopCar-body .food-body li .food-money{
+    color: #F74342;
+    order: 3;
+}
+.shopCar .shopCar-body .food-body li .num-group{
+    order: 2;
+}
+.shopCar .shopCar-body .food-body li .num-group span{
+    border: 1px solid #EFE9E9;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+.shopCar .shopCar-body .food-body li .num-group input{
+    width: 20px;
+    text-align: center;
+    border: 1px solid #EFE9E9;
+}
+
+
+
+
+
+
+/* 购物车结束 */
 
 
 
