@@ -40,7 +40,7 @@ UserDao userdao;
 		return userdao.Cuisine();
 	}
 	@Override
-	public Map<String, Object> Menu(String cuisine_number) {
+	public List<MerchantEntity> Menu(String cuisine_number) {
 		// TODO Auto-generated method stub
 		return userdao.Menu(cuisine_number);
 	}

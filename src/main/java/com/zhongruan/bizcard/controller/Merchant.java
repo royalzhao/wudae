@@ -23,7 +23,7 @@ public class Merchant {
 	public String shangjiaxinxi(){
 		return "index";
 	}
-	@RequestMapping(value="/index2")
+	@RequestMapping(value="/index3")
 	public String shangjiaxinxi6(){
 		return "index2";
 	}
@@ -36,14 +36,20 @@ public class Merchant {
 		return "index";
 	}
 	
-	@GetMapping("/caixi")
+	@RequestMapping(value="/index2")
 	public String caixi(
-		@RequestParam(value="cuisine_number",defaultValue="")String cuisine_number	
+		@RequestParam(value="sid",defaultValue="")String cuisine_number	
 			,Map m){
-		Map<String,Object> map = userserivce.Menu(cuisine_number);
-		m.put("map",map);
+		System.out.println("--------"+cuisine_number);
+		List<MerchantEntity> list = userserivce.Menu(cuisine_number);
+		m.put("list",list);
+		List<CuisineEntity> list1 = userserivce.Cuisine();
+		m.put("list1", list1);
 		return "index2";
 	}
+	
+	
+	
 	/*
 	@PostMapping("/")
 	@ResponseBody

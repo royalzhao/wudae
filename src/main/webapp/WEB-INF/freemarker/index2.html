@@ -68,9 +68,11 @@
                     </div>
                     <div class="col-lg-11 col-md-10 col-sm-10 col-xs-9">
                         <ul>
-                            <li class="active"><a href="#">全部商家</a></li>
+                            <li class="active"><a href="./index">全部商家</a></li>
                             
-                            <li><a href=""></a></li>    
+                             <#list list1 as m>
+                            <li><a href="./index2?sid=${m.cuisine_number}">${m.cuisine_name}</a></li>    
+                             </#list>  
                             
                         </ul>
                     </div>
@@ -80,7 +82,7 @@
         </div>
         <div class="container">
             <div class="main">
-           
+            <#list list as m>
                 <div class="row">
                     <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6">
                         <div class="main-item">
@@ -88,10 +90,10 @@
                                 <div class="item-pic">
                                     <img src="./lib/img/shop/shop (1).jpg" alt="">
                                 </div>
-                                <p class="item-time">分钟</p>
+                                <p class="item-time">${m.restaurant_name1}分钟</p>
                             </div>
                             <div class="item-right">
-                                <p class="item-title"></p>
+                                <p class="item-title">${m.restaurant_name}</p>
                                 <div class="star-buy">
                                     <div class="item-star"> 
                                         <span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
@@ -101,7 +103,7 @@
                                     </div>
                                 </div>
                                 <p class="train-money">
-                                    配送费￥ <span class="train-money-num"></span>
+                                    配送费￥ <span class="train-money-num">${m.restaurant_money}</span>
                                 </p>
                                 <p class="item-label">
                                     <span class="label-new">新</span>
@@ -112,17 +114,17 @@
     
                             <div class="motai" style="display:none;">
                                 <div class="motai-title">
-                                 
+                                 ${m.restaurant_name}
                                 </div>
                                 
                                 <p><span class="label-new">新</span>新店开张，欢迎光临</p>
                                 <p><span class="label-bao">保</span>已加入外卖保计划</p>
                                 <div class="motai-train">
-                                    <div>配送费￥<span class="train-money"></span></div>
-                                    <div>平均<span class="train-time"></span>分钟送达</div>
+                                    <div>配送费￥<span class="train-money">${m.restaurant_money}</span></div>
+                                    <div>平均<span class="train-time">${m.restaurant_name1}</span>分钟送达</div>
                                 </div>
                                 <div class="motai-content">
-                                 
+                                    ${m.restaurant_description}
                                 </div>
     
                             </div>
@@ -130,6 +132,7 @@
                         
                     </div>
                    
+                   </#list>
                   
                    
                     

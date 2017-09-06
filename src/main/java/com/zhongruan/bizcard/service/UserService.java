@@ -14,5 +14,5 @@ public interface UserService {
 	List<MerchantEntity> Merchant();
 	//List<MerchantEntity> findByName(String keyword);
 	List<CuisineEntity> Cuisine();
-	Map<String,Object> Menu(String cuisine_number);
+	List<MerchantEntity> Menu(String cuisine_number);
 }
