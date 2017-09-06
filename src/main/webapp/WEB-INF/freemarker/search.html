@@ -45,8 +45,9 @@
                             <input type="text" class="form-control" id="exampleInputAmount" placeholder="请输入你的收货地址">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success">搜索</button>
+                    <button type="button" class="btn btn-success" id="search-btn">搜索</button>
                 </form>
+                 
             </div>
         </div>
 
@@ -62,13 +63,73 @@
 
 
         <!-- jQuery -->
-        <script src="./lib//js/jquery.js"></script>
+        <script src="./lib/js/jquery.js"></script>
         <!-- Bootstrap JavaScript -->
-        <script src="./lib//js/bootstrap.min.js"></script>
+        <script src="./lib/js/bootstrap.min.js"></script>
+       
         <script>
-            $(function(){
-                
-		    })
+        // 页面加载完毕
+        $(function(){
+        	
+        	
+        	$('#search-btn').on('click',function(){
+        
+        		$.ajax({
+        			url:'mohu',
+        			data:{
+        				keyword:$('#exampleInputAmount').val()
+        			},
+        			type:'post',
+        			success:function(res){
+        				if(res.message == 'ok'){
+                        	window.location.href = 'index2'
+                        }
+        				else{
+        					window.location.href = 'search'
+        				}
+        					
+        				
+        				
+        			},
+        			error:function(){
+        				alert(2)
+        			}
+        		})
+        		
+        	})
+        	
+        	
+          // 给id为search的元素绑定一个响应键盘输入的事件
+          $('#exampleInputAmount').on('keypress', function (event) {
+             console.log(event.keyCode)
+            // 判断输入的是否是回车
+            if (event.keyCode == 13) {
+          
+        		$.ajax({
+        			url:'mohu',
+        			data:{
+        				keyword:$('#exampleInputAmount').val()
+        			},
+        			type:'post',
+        			success:function(res){
+        				if(res.message == 'ok'){
+                        	window.location.href = 'index2'
+                        }
+        				else{
+        					window.location.href = 'search'
+        				}
+        				
+        			},
+        			error:function(){
+        				alert(2)
+        			}
+        		})
+            }
+              // 输入回车后发起一个ajax请求
+              
+          })
+        })
         </script>
+       
     </body>
 </html>

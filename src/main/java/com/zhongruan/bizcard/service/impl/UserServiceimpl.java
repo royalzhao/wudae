@@ -28,19 +28,19 @@ UserDao userdao;
 		return userdao.Commodity(Restaurant_number);
 	}
 
-	/*
+	
 	public List<MerchantEntity> findByName(String keyword) {
 		// TODO Auto-generated method stub
 		return userdao.findByName(keyword);
 	}
-	*/
+	
 	@Override
 	public List<CuisineEntity> Cuisine() {
 		// TODO Auto-generated method stub
 		return userdao.Cuisine();
 	}
 	@Override
-	public Map<String, Object> Menu(String cuisine_number) {
+	public List<MerchantEntity> Menu(String cuisine_number) {
 		// TODO Auto-generated method stub
 		return userdao.Menu(cuisine_number);
 	}

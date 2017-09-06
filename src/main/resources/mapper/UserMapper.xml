@@ -13,12 +13,12 @@
   <select id="findByName" resultType="com.zhongruan.bizcard.entity.MerchantEntity">
     select *
     from restaurant
-    where locate(#{keyword}, sname) > 0
+    where locate(#{keyword}, restaurant_name) > 0
   </select>
    <select id="Cuisine" resultType="com.zhongruan.bizcard.entity.CuisineEntity">
     select * from cuisine 
   </select>
-  <select id="Menu" resultType="java.util.Map">
-  select * from menu where cuisine_number=#{cuisine_number}
+  <select id="Menu" resultType="com.zhongruan.bizcard.entity.MerchantEntity">
+  select * from restaurant where cuisine_number=#{cuisine_number}
   </select>
 </mapper>  

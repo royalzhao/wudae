@@ -12,7 +12,7 @@ import com.zhongruan.bizcard.entity.MerchantEntity;
 public interface UserService {
 	List<MerchantEntity> Commodity(String Restaurant_number);
 	List<MerchantEntity> Merchant();
-	//List<MerchantEntity> findByName(String keyword);
+	List<MerchantEntity> findByName(String keyword);
 	List<CuisineEntity> Cuisine();
-	Map<String,Object> Menu(String cuisine_number);
+	List<MerchantEntity> Menu(String cuisine_number);
 }

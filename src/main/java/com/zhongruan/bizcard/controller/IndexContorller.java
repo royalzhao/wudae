@@ -20,13 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
-
-
-
-import com.zhongruan.bizcard.entity.ContactEntity;
-
 import com.zhongruan.bizcard.service.ContactService;
-
 @Controller
 public class IndexContorller {
 
@@ -39,21 +33,32 @@ public class IndexContorller {
 	public String index() {
 		return "index";
 	}
-	//��½
-	@RequestMapping(value="login")
-	public String login() {
-		return "login";
-	}
-	//查询
-	@RequestMapping(value="search")
-	public String search() {
-		return "search";
-	}
-	//查询
-	@RequestMapping(value="content")
+
+	@RequestMapping(value="/content")
 	public String content() {
 		return "content";
 	}
+
+	//查询
+	@RequestMapping(value="/search")
+	public String search() {
+		return "search";
+	}
+
+	// //login
+	// @RequestMapping(value="login")
+	// public String login() {
+	// 	return "login";
+	// }
+	//��½��֤
+
+	@RequestMapping(value="/login")
+	public String login() {
+		return "login";
+	}
+
+
+
 
 
 	@PostMapping(value="Login")
@@ -64,10 +69,11 @@ public class IndexContorller {
 			HttpServletRequest request
 			) {
 		HttpSession session= request.getSession();
-		Map<String, Object> result=service.userlogin(user_name, user_password);
+		Map<String, Object> result = service.userlogin(user_name, user_password);
 		Map<String, String> map  = new HashMap();
 		
 		if(!"1".equals(result.get("counter").toString())) {
+			//session.setAttribute("result", result);
 			map.put("message","error");
 			return map;
 		}
@@ -75,7 +81,8 @@ public class IndexContorller {
 		map.put("message", "ok");
 		return map;
 	}
-	
+
+
 
 	@PostMapping(value="uname")
 	@ResponseBody
@@ -94,19 +101,16 @@ public class IndexContorller {
 		return map;
 	}
 
-	
+
+
 
 	@PostMapping(value="add")
 	@ResponseBody
 	public String add(@RequestParam(value="account",defaultValue="") String user_name,
 			@RequestParam(value="password",defaultValue="") String user_password) {
 		System.out.println("-------"+user_name);
-
 		service.add(user_name, user_password);
-
-		service.add(user_name,user_password);
-
-		return "index";
+	return "index";
 	}
 
 	
