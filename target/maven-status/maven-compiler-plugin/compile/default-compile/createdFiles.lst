@@ -1,0 +1,8 @@
+com\zhongruan\bizcard\controller\Merchant.class
+com\zhongruan\bizcard\controller\Commodity.class
+com\zhongruan\bizcard\service\impl\UserServiceimpl.class
+com\zhongruan\bizcard\entity\CuisineEntity.class
+com\zhongruan\bizcard\service\UserService.class
+com\zhongruan\bizcard\dao\UserDao.class
+com\zhongruan\bizcard\entity\CommodityEntity.class
+com\zhongruan\bizcard\entity\MerchantEntity.class

@@ -28,12 +28,12 @@ UserDao userdao;
 		return userdao.Commodity(Restaurant_number);
 	}
 
-	/*
+	
 	public List<MerchantEntity> findByName(String keyword) {
 		// TODO Auto-generated method stub
 		return userdao.findByName(keyword);
 	}
-	*/
+	
 	@Override
 	public List<CuisineEntity> Cuisine() {
 		// TODO Auto-generated method stub

@@ -179,7 +179,7 @@
         <version>2.2</version>
         <configuration>
           <path>/</path>
-          <port>8878</port>
+          <port>8898</port>
         </configuration>
       </plugin>
       <plugin>

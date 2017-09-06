@@ -20,12 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttribute;
-
-
-
-
 import com.zhongruan.bizcard.service.ContactService;
-
 @Controller
 public class IndexContorller {
 
@@ -38,15 +33,18 @@ public class IndexContorller {
 	public String index() {
 		return "index";
 	}
+
 	@RequestMapping(value="/content")
 	public String content() {
 		return "content";
 	}
+
 	//查询
 	@RequestMapping(value="/search")
 	public String search() {
 		return "search";
 	}
+
 	// //login
 	// @RequestMapping(value="login")
 	// public String login() {
@@ -58,6 +56,10 @@ public class IndexContorller {
 	public String login() {
 		return "login";
 	}
+
+
+
+
 
 	@PostMapping(value="Login")
 	@ResponseBody
@@ -81,6 +83,7 @@ public class IndexContorller {
 	}
 
 
+
 	@PostMapping(value="uname")
 	@ResponseBody
 	public Map<String, String> uname(@RequestParam(value="account",defaultValue="") String user_name,HttpServletRequest request) {
@@ -98,13 +101,16 @@ public class IndexContorller {
 		return map;
 	}
 
+
+
+
 	@PostMapping(value="add")
 	@ResponseBody
 	public String add(@RequestParam(value="account",defaultValue="") String user_name,
 			@RequestParam(value="password",defaultValue="") String user_password) {
 		System.out.println("-------"+user_name);
 		service.add(user_name, user_password);
-		return "index";
+	return "index";
 	}
 
 	

@@ -79,9 +79,12 @@
             <value>/login</value>
             <value>/index</value>
             <value>/search</value>
+             <value>/content</value>
             <value>/Login</value>
              <value>/uname</value>
               <value>/add</value>
+              <value>/mohu</value>
+              <value>/index2</value>
           </list>
         </property>
       </bean>

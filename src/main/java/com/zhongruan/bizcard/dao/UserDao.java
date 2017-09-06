@@ -15,5 +15,5 @@ public interface UserDao {
 	 List<MerchantEntity> Merchant();
 	 List<CuisineEntity> Cuisine();
 	 List<MerchantEntity> Menu(@Param("cuisine_number") String cuisine_number);
-	// List<MerchantEntity> findByName(@Param("keyword") String keyword);
+	 List<MerchantEntity> findByName(@Param("keyword") String keyword);
 }
