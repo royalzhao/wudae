@@ -221,6 +221,56 @@ body{
     margin-top: 10px;
     color: #666;
 }
+footer{
+	background: #F7F7F7;
+    width: 100%;
+    border: 1px solid #ECE7E7;
+}
+footer .container{
+	padding-top: 30px;
+}
+footer .container .foot-left ul{
+	float: left;
+	margin: 0 20px;
+	border-left: 1px solid #ECE7E7;
+	padding-left: 10px;
+}
+footer .container .foot-left ul li{
+	color: #666;
+	margin: 5px;
+}
+footer .container .foot-left ul li a{
+	color: #666;
+}
+footer .container .foot-left ul li:nth-of-type(1){
+	color: #fff;
+	margin-bottom: 10px;
+}
+
+footer .container .row .foot-right .foot-right-content{
+	width: 250px;
+	margin: 0 auto;
+	text-align: center;
+}
+footer .container .row .foot-right .foot-right-content p:nth-of-type(1){
+	font-size: 20px;
+	color: #444;
+	margin: 10px;
+}
+footer .container .row .foot-right .foot-right-content p:nth-of-type(2){
+	font-size: 30px;
+	color: #FF9A00;
+	margin: 10px;
+}
+footer .footer-bottom{
+    height: 80px;
+    text-align: center;
+    line-height: 80px;
+    color: #666;
+    background: #F7F7F7;
+    border-top: 1px solid #ECE7E7;
+    font-size: 12px;
+}
 
 
 @media only screen and (min-width:768px ) {
