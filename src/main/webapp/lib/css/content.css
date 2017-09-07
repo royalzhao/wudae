@@ -109,7 +109,7 @@ body{
     border: 0;
     height: 100%;
     flex-grow: 3;
-    padding-left: 10px;
+    text-indent: 10px;
 }
 .content-nav .container .row .search-form button{
     float: right;
@@ -136,7 +136,7 @@ body{
 }
 .content-body .container .row .content-body-nav ul li{
     margin: 5px;
-    width: 18%;
+    width: 118px;
 }
 .content-body .container .row .content-body-nav ul li a {
     display: block;
@@ -492,6 +492,29 @@ body{
     }
     .navbar{
         min-height: 50px;
+    }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+        background: #F4A435;
+    }
+    .navbar-default .navbar-toggle{
+        border-color:#fff;
+    }
+    .navbar-default .navbar-toggle .icon-bar{
+        background-color:#fff;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+        background-color:#F4A435;
+    }
+    .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover{
+        color:#fff; 
+    }
+    .navbar-default .navbar-nav > li > a{
+        color: #fff;
+    }
+    .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover{
+        color: #fff;
+        background-color: #666;
+    
     }
 
 }

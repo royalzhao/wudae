@@ -60,7 +60,7 @@
                     </p>
                 </div>
             </div>
-            <div class="pull-right">
+            <div class="pull-right hidden-xs">
                 <ul>
                     <li>
                         <p>起送价</p>
@@ -92,7 +92,7 @@
                             <li><a href="">商家资质</a></li>
                         </ul>
                     </div>
-                    <div class="pull-right hidden-xs">
+                    <div class="pull-right hidden-xs hidden-sm">
                         <ul>
                             <li class="active"><a href="javascript:">默认排序 </a></li>
                             <li><a href="javascript:">评分<i class="glyphicon glyphicon-arrow-down"></i></a></li>
@@ -340,16 +340,14 @@
             adddel();
             late();
             numRed();
+            search_null()
             $('#shopCar-money').click(function(){
+                search_null()
                 $('.shopCar-content').slideToggle();
                 $('.shopCar-body').css('display','block');
             })
-
-            if($('.food-body').html() != null){
-                $('.defalut-body').css('display','none');
-            }else{
-                $('.defalut-body').css('display','block');
-            }
+          
+            
             $('.addShopCar').each(function(){
                 $(this).click(function(){
                     $('.shopCar-content').slideDown();
@@ -360,6 +358,7 @@
                     adddel();
                     late();
                     numRed();
+                    search_null()
                 })
             })
             // 清空
@@ -371,6 +370,7 @@
                 }
                 late();
                 $(".numRed").text(0);
+                search_null()
             })
             
 
@@ -387,7 +387,19 @@
         　　　　$(this).find('.modal-content').css("margin-top", top);   
         　　});   
         };
-
+        //检查购物车空值
+        function search_null(){
+            //console.log($('.food-body').html())
+            var sum = 0;
+            $('.food-body li').each(function(){
+                sum = sum+1;
+                if(sum>0){
+                    $('.defalut-body').css('display','none');
+                }else{
+                    $('.defalut-body').css('display','block');
+                }
+            })
+        }
         //计算总额
         function total(){
             var sum = 0;
@@ -435,6 +447,7 @@
                     total();
                     late();
                     numRed();
+                    search_null()
                 })
 
             })
@@ -454,7 +467,7 @@
                     total();
                     late();
                     numRed();
-                   
+                    search_null()
                 })
 
             })
